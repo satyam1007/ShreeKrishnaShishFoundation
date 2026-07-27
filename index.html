@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShreeKrishnashish Yog Mandir Charitable Sansthan | Sahaara Baniye Unka</title>
+    <meta name="description"
+        content="ShreeKrishnashish Yog Mandir Charitable Sansthan — orphan aur zaroorat-mand bachchon ke liye free food, stay, education aur vocational skills. Aaj hi daan karein.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="/images/krishnaLogo.png" />
+    <style>
+        /* ================= ROOT / TOKENS ================= */
+        :root {
+            --primary: #e67e22;
+            --primary-dark: #c9660f;
+            --primary-light: #f5a058;
+            --navy: #2c3e50;
+            --navy-soft: #3d5166;
+            --bg: #fffbf7;
+            --bg-alt: #fff4e9;
+            --gold: #f2b705;
+            --maroon: #7a2e12;
+            --white: #ffffff;
+            --line: #f0ddc9;
+            --shadow: 0 10px 30px rgba(44, 62, 80, 0.08);
+            --shadow-lg: 0 20px 50px rgba(230, 126, 34, 0.18);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --font-head: 'Poppins', 'Segoe UI', sans-serif;
+            --font-body: 'Inter', 'Segoe UI', sans-serif;
+            --max-w: 1200px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 100%;
+            overflow-x: clip;
+            max-width: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--navy);
+            line-height: 1.65;
+            overflow-x: clip;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        section {
+            padding: clamp(3rem, 6vw, 6rem) 1.25rem;
+        }
+
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-head);
+            color: var(--navy);
+            line-height: 1.25;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--primary-dark);
+            background: var(--bg-alt);
+            padding: .4rem .9rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--line);
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+            font-weight: 700;
+            margin-bottom: .75rem;
+        }
+
+        .section-sub {
+            color: #5c6b78;
+            font-size: clamp(.95rem, 1.4vw, 1.05rem);
+            max-width: 640px;
+        }
+
+        .center {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Signature diya / flame motif used as a recurring mark */
+        .flame {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            position: relative;
+        }
+
+        .flame::before {
+            content: "\f06d";
+            /* fa-fire */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--gold);
+        }
+
+        /* ================= BUTTONS ================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .55rem;
+            font-family: var(--font-head);
+            font-weight: 600;
+            font-size: .95rem;
+            padding: .95rem 1.7rem;
+            border-radius: 999px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 24px 40px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: var(--white);
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-3px);
+        }
+
+        .btn-navy {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .btn-navy:hover {
+            background: var(--navy-soft);
+            transform: translateY(-3px);
+        }
+
+        /* ================= NAVBAR ================= */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(255, 251, 247, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: .85rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--navy);
+        }
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(145deg, var(--primary), var(--maroon));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 16px rgba(230, 126, 34, .35);
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .logo-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo small {
+            display: block;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: .62rem;
+            color: #7c8794;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--navy-soft);
+            position: relative;
+            padding: .3rem 0;
+            transition: color .2s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width .25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-dark);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav .btn-primary {
+            padding: .65rem 1.3rem;
+            font-size: .85rem;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .burger-label {
+            display: none;
+            cursor: pointer;
+            width: 26px;
+            height: 20px;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1001;
+        }
+
+        .burger-label span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: var(--navy);
+            border-radius: 3px;
+            transition: transform .3s ease, opacity .3s ease;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            background:
+                radial-gradient(circle at 90% 10%, rgba(230, 126, 34, 0.14), transparent 45%),
+                radial-gradient(circle at 5% 90%, rgba(44, 62, 80, 0.08), transparent 40%),
+                var(--bg);
+            padding-top: clamp(3rem, 7vw, 5rem);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-hindi {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: clamp(1.9rem, 4vw, 3.1rem);
+            color: var(--navy);
+            line-height: 1.3;
+            margin-bottom: 1.3rem;
+        }
+
+        .hero-hindi .accent {
+            color: var(--primary);
+            position: relative;
+        }
+
+        .hero-desc {
+            font-size: clamp(1rem, 1.4vw, 1.12rem);
+            color: #546374;
+            max-width: 560px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-desc strong {
+            color: var(--navy);
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .hero-cta .btn-outline {
+            border-color: var(--navy);
+            color: var(--navy);
+        }
+
+        .hero-cta .btn-outline:hover {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        .stat b {
+            display: block;
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .stat span {
+            font-size: .8rem;
+            color: #7c8794;
+            font-weight: 600;
+        }
+
+        .video-wrap {
+            background: var(--navy);
+            border-radius: 24px;
+            padding: .9rem;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            transform: rotate(1.2deg);
+        }
+
+        .video-frame {
+            aspect-ratio: 9/13;
+            max-height: 560px;
+            border-radius: 18px;
+            overflow: hidden;
+            background: linear-gradient(155deg, #34495e, #1c2833);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            position: absolute;
+            inset: 0;
+        }
+
+        .video-placeholder {
+            text-align: center;
+            color: #fff;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ig-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 20px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(238, 42, 123, 0.35);
+        }
+
+        .video-placeholder p {
+            font-size: .9rem;
+            opacity: .85;
+            margin-top: .4rem;
+        }
+
+        .video-caption {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .9rem .5rem .3rem;
+            color: #fff;
+            font-size: .8rem;
+            font-weight: 600;
+        }
+
+        .video-caption .flame {
+            margin-right: .3rem;
+        }
+
+        /* ================= ABOUT / VISION ================= */
+        .about {
+            background: var(--white);
+        }
+
+        .about .container {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .founder-box {
+            background: var(--bg-alt);
+            border-radius: var(--radius);
+            padding: 1.2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .founder-photo {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 4 / 5;
+            margin: 0 auto 1.5rem;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #f8f8f8;
+            border: 3px solid var(--primary-light);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .founder-photo:hover {
+            transform: translateY(-5px);
+        }
+
+        .founder-photo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .founder-name {
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .founder-role {
+            text-align: center;
+            font-size: .82rem;
+            color: #8a95a1;
+            margin-top: .15rem;
+        }
+
+        .about-copy h2 {
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
+            margin-bottom: 1.1rem;
+        }
+
+        .about-copy p {
+            color: #546374;
+            margin-bottom: 1.1rem;
+        }
+
+        .about-copy p strong {
+            color: var(--navy);
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: linear-gradient(120deg, #eafaf1, #f4fff8);
+            border: 1.5px solid #b7e8c9;
+            border-radius: var(--radius-sm);
+            padding: 1rem 1.3rem;
+            margin: 1.5rem 0;
+        }
+
+        .trust-badge i {
+            font-size: 1.7rem;
+            color: #1e9e5c;
+        }
+
+        .trust-badge h4 {
+            font-size: .95rem;
+            color: #166b3e;
+        }
+
+        .trust-badge p {
+            font-size: .8rem;
+            color: #3d8a5f;
+            margin: 0;
+        }
+
+        .about-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .9rem;
+            margin-top: 1.3rem;
+        }
+
+        .about-point {
+            display: flex;
+            gap: .6rem;
+            align-items: flex-start;
+            font-size: .88rem;
+            color: #455361;
+        }
+
+        .about-point i {
+            color: var(--primary);
+            margin-top: .2rem;
+        }
+
+        /* ================= SKILLS ================= */
+        .skills {
+            background: var(--bg);
+            position: relative;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.6rem;
+            margin-top: 2.8rem;
+        }
+
+        .skill-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary);
+            transition: transform .35s ease, box-shadow .35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 110px;
+            height: 110px;
+            background: var(--bg-alt);
+            border-radius: 50%;
+            z-index: 0;
+            transition: transform .4s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .skill-card:hover::before {
+            transform: scale(1.4);
+        }
+
+        .skill-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--primary), var(--maroon));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 10px 20px rgba(230, 126, 34, .3);
+        }
+
+        .skill-card h3 {
+            font-size: 1.08rem;
+            margin-bottom: .6rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-card p {
+            font-size: .86rem;
+            color: #5c6b78;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .35rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-tags span {
+            font-size: .68rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            background: var(--bg-alt);
+            padding: .28rem .6rem;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+        }
+
+        /* ================= DONATION ================= */
+        .donate {
+            background: var(--navy);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .donate::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 20%, rgba(230, 126, 34, 0.18), transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(230, 126, 34, 0.12), transparent 40%);
+        }
+
+        .donate .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .donate .eyebrow {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--gold);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .donate .section-title {
+            color: #fff;
+        }
+
+        .donate .section-sub {
+            color: #c3cdd6;
+        }
+
+        .donate-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 2rem;
+            margin-top: 2.8rem;
+        }
+
+        .donate-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius);
+            padding: 2rem;
+            backdrop-filter: blur(6px);
+        }
+
+        .donate-box h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .donate-box h3 i {
+            color: var(--primary);
+        }
+
+        .qr-box {
+            background: #fff;
+            border-radius: var(--radius-sm);
+            padding: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .8rem;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        .qr-image {
+            width: 210px;
+            height: 210px;
+            border-radius: 10px;
+            background: repeating-linear-gradient(45deg, #eee, #eee 8px, #fafafa 8px, #fafafa 16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: .4rem;
+            color: var(--navy);
+            border: 2px dashed #d5d5d5;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .qr-image i {
+            font-size: 2.4rem;
+            color: var(--primary);
+        }
+
+        .qr-image span {
+            font-size: .7rem;
+            font-weight: 700;
+            color: #8a95a1;
+        }
+
+        .upi-apps {
+            display: flex;
+            gap: .7rem;
+            margin-top: .3rem;
+        }
+
+        .upi-apps span {
+            font-size: .68rem;
+            font-weight: 700;
+            padding: .3rem .6rem;
+            border-radius: 999px;
+            background: var(--bg-alt);
+            color: var(--primary-dark);
+        }
+
+        .upi-id {
+            text-align: center;
+            margin-top: 1.2rem;
+            font-size: .85rem;
+            color: #c3cdd6;
+        }
+
+        .upi-id b {
+            color: #fff;
+            display: block;
+            font-size: 1rem;
+            margin-top: .2rem;
+        }
+
+        .bank-list {
+            display: flex;
+            flex-direction: column;
+            gap: .9rem;
+        }
+
+        .bank-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            padding: .85rem 1.1rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .bank-row .label {
+            font-size: .72rem;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: #9fb0bd;
+            display: block;
+        }
+
+        .bank-row .value {
+            font-size: .98rem;
+            font-weight: 700;
+            color: #fff;
+            word-break: break-word;
+        }
+
+        .copy-btn {
+            background: rgba(230, 126, 34, 0.15);
+            color: var(--primary-light);
+            border: 1px solid rgba(230, 126, 34, 0.35);
+            border-radius: 8px;
+            padding: .5rem .7rem;
+            cursor: pointer;
+            font-size: .85rem;
+            flex-shrink: 0;
+            transition: background .2s ease, transform .2s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .copy-btn.copied {
+            background: #27ae60;
+            color: #fff;
+            border-color: #27ae60;
+        }
+
+        .donate-note {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: .85rem;
+            color: #9fb0bd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: #1c2833;
+            color: #aab6c0;
+            padding: 3rem 1.25rem 1.5rem;
+        }
+
+        .footer-grid {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            color: #fff;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+        }
+
+        footer h4 {
+            color: #fff;
+            font-size: .95rem;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            font-size: .85rem;
+            line-height: 1.7;
+        }
+
+        .footer-links li {
+            margin-bottom: .6rem;
+        }
+
+        .footer-links a {
+            font-size: .85rem;
+            transition: color .2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .social-row {
+            display: flex;
+            gap: .7rem;
+            margin-top: 1rem;
+        }
+
+        .social-row a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .2s ease, transform .2s ease;
+        }
+
+        .social-row a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: var(--max-w);
+            margin: 2.5rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+            justify-content: space-between;
+            font-size: .78rem;
+        }
+
+        /* ================= SCROLL REVEAL ================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+            }
+
+            .video-wrap {
+                max-width: 420px;
+                margin: 0 auto;
+                transform: none;
+            }
+
+            .about .container {
+                grid-template-columns: 1fr;
+            }
+
+            .founder-box {
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .donate-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: min(78vw, 320px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 6rem 2rem 2rem;
+                gap: 1.6rem;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
+                transform: translateX(100%);
+                transition: transform .35s ease;
+                z-index: 1000;
+            }
+
+            .burger:checked~.nav-links {
+                transform: translateX(0);
+            }
+
+            .burger-label {
+                display: flex;
+            }
+
+            .burger:checked~.burger-label span:nth-child(1) {
+                transform: translateY(8.5px) rotate(45deg);
+            }
+
+            .burger:checked~.burger-label span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .burger:checked~.burger-label span:nth-child(3) {
+                transform: translateY(-8.5px) rotate(-45deg);
+            }
+
+            .nav-cta .btn-primary span {
+                display: none;
+            }
+
+            .about-points {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+            }
+
+            .logo small {
+                display: none;
+            }
+
+            .bank-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .5rem;
+            }
+
+            .copy-btn {
+                align-self: flex-end;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* focus visibility */
+        a:focus-visible,
+        button:focus-visible,
+        .copy-btn:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <a href="#home" class="logo">
+                <!-- <span class="logo-mark"><i class="fa-solid fa-om"></i></span> -->
+                <span class="logo-mark"><img src="./images/krishnaLogo.png" alt="ShreeKrishnashish Logo"></span>
+                <span>SKYMCS<small>Yog Mandir Charitable Sansthan</small></span>
+            </a>
+
+            <input type="checkbox" id="burger" class="burger">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#vision">Our Vision</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#support">Support Us</a></li>
+                <li class="nav-cta">
+                    <a href="#support" class="btn btn-primary"><i class="fa-solid fa-hand-holding-heart"></i>
+                        <span>Donate Now</span></a>
+                </li>
+            </ul>
+            <label for="burger" class="burger-label" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </label>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-left reveal">
+                    <span class="eyebrow"><span class="flame"></span> Ek Chhota Sa Prayaas, Ek Bada Sapna</span>
+                    <h1 class="hero-hindi">Sahaara Baniye <span class="accent">Unka</span>, Jo Apne Pairon Par Khada
+                        Hona Chahte Hain</h1>
+                    <p class="hero-desc">Hazaaron bachche aise hain jo apna bachpan skool mein nahi, balki
+                        <strong>dihadi majdoori</strong> mein bita dete hain — kyunki ghar ki majboori unse chuna nahi
+                        karne deti. ShreeKrishnashish Yog Mandir Charitable Sansthan aise anaath aur ati-gareeb bachchon
+                        ko <strong>muft bhojan, aashray, shiksha aur hunar</strong> deta hai, taaki wo bhikh nahi, izzat
+                        ki zindagi jee sakein.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#support" class="btn btn-primary"><i class="fa-solid fa-qrcode"></i> Direct Support
+                            (QR/Account)</a>
+                        <a href="#story" class="btn btn-outline"><i class="fa-solid fa-circle-play"></i> Watch Our
+                            Story</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat"><b>100%</b><span>Fund Baccho Par Kharch</span></div>
+                        <div class="stat"><b>4</b><span>Core Skill Programs</span></div>
+                        <div class="stat"><b>Legal</b><span>Registered Trust</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-right reveal" id="story">
+                    <div class="video-wrap">
+                        <!-- Outer container jo sirf video dikhayega aur top bar ko block karega -->
+                        <div class="video-frame"
+                            style="width: 100%; max-width: 400px; margin: 0 auto; overflow: hidden; border-radius: 8px; height: 420px; position: relative; border: 1px solid #ccc;">
+                            <iframe src="https://www.instagram.com/reel/DW-ZWWgEax9/embed/" allowtransparency="true"
+                                allow="encrypted-media" scrolling="no" frameborder="0"
+                                style="width: 100%; height: 520px; border: none; display: block; position: absolute; top: -75px; left: 0;">
+                            </iframe>
+                        </div>
+                        <div class="video-caption" style="margin-top: 10px; text-align: center;">
+                            <span><span class="flame"></span> @skymcs_official</span>
+                            <span>Follow Our Journey <i class="fa-solid fa-arrow-up-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT / VISION ================= -->
+        <section class="about" id="vision">
+            <div class="container">
+                <div class="founder-box reveal">
+                    <div class="founder-photo">
+                        <img src="./images/founderPhoto.png" alt="Founder & Trustee">
+                    </div>
+
+                    <p class="founder-name">Founder & Trustee</p>
+                    <p class="founder-role">
+                        ShreeKrishnashish Yog Mandir Charitable Sansthan
+                    </p>
+                </div>
+
+                <div class="about-copy reveal">
+                    <span class="eyebrow">Hamara Vishwas</span>
+                    <h2>Building Nahi, Pehle <span style="color:var(--primary);">Bhavishya</span> Banana Hai!</h2>
+                    <p>Hum jaante hain ki abhi humare paas koi bada bhavya bhawan ya sainkdon bachchon ka bada samooh
+                        nahi hai — <strong>hum shuruaat mein hain</strong>. Lekin ek accha kaam shuru karne ke liye bade
+                        building ki nahi, sacchi niyat aur sahi disha ki zaroorat hoti hai.</p>
+                    <p>Jab hum sarkar se sahayata mangte hain, to jawab milta hai — <em>"Pehle kuch kaam karke dikhao,
+                            phir dekhenge."</em> Hum yeh chunauti sweekar karte hain. Isiliye hum apni har prakriya mein
+                        <strong>poori pardarshita (transparency)</strong> rakhte hain — har rupaya, har record, har
+                        niyam janta ke saamne khula hai.
+                    </p>
+
+                    <div class="trust-badge">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        <div>
+                            <h4>Legal Documents &amp; Registration Verified</h4>
+                            <p>Sansthan poori tarah se kaanooni roop se panjikrit (registered) hai — sabhi dastavez
+                                maang par upalabdh hain.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-points">
+                        <div class="about-point"><i class="fa-solid fa-circle-check"></i> Poora fund seedha bachchon ki
+                            dekhbhal mein</div>
+                        <div class="about-point"><i class="fa-solid fa-circle-check"></i> Har kharch ka public record
+                        </div>
+                        <div class="about-point"><i class="fa-solid fa-circle-check"></i> Koi vichaulia (middleman) nahi
+                        </div>
+                        <div class="about-point"><i class="fa-solid fa-circle-check"></i> Registered Trust ke niyamon ka
+                            palan</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SKILLS & ROADMAP ================= -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="center reveal" style="max-width:680px;">
+                    <span class="eyebrow"><span class="flame"></span> Seva Ka Roadmap</span>
+                    <h2 class="section-title">Hunar Jo Bachchon Ko Aatmanirbhar Banaye</h2>
+                    <p class="section-sub center">Sirf padhai nahi — hum bachchon ko aise practical hunar sikhate hain
+                        jinse wo apni rozi khud kama sakein aur samman se jee sakein.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-drum"></i></div>
+                        <h3>Vedic &amp; Classical Music</h3>
+                        <p>Bhartiya sangeet parampara se juड़kar bachche manch par apni pratibha dikhana seekhte hain.
+                        </p>
+                        <div class="skill-tags">
+                            <span>Tabla</span><span>Harmonium</span><span>Kartal</span><span>Dholak</span><span>Bansuri</span><span>Bhajan
+                                Kirtan</span><span>Manch Sanchalan</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-person-praying"></i></div>
+                        <h3>Yoga &amp; Naturopathy</h3>
+                        <p>Shareerik swasthya aur mानसिक santulan ke liye yoga abhyas, saath hi prakritik chikitsa ka
+                            gyan.</p>
+                        <div class="skill-tags">
+                            <span>Physical Fitness</span><span>Yoga Instruction</span><span>Naturopathic Care</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
+                        <h3>Fine Arts &amp; Creativity</h3>
+                        <p>Sketching aur painting sikhaakar bachchon ke liye creative career ke naye raaste khole jaate
+                            hain.</p>
+                        <div class="skill-tags">
+                            <span>Sketching</span><span>Painting</span><span>Creative Career Prep</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-house-chimney-medical"></i></div>
+                        <h3>Free Coaching &amp; Hostel</h3>
+                        <p>Muft rehne ka intezaam, poshtik bhojan, aur academic coaching taaki bachche padhai par dhyan
+                            de sakein.</p>
+                        <div class="skill-tags">
+                            <span>Free Lodging</span><span>Nutritious Meals</span><span>Premium Coaching</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DONATION ================= -->
+        <section class="donate" id="support">
+            <div class="container">
+                <div class="center reveal" style="max-width:680px;">
+                    <span class="eyebrow"><span class="flame"></span> Radical Transparency</span>
+                    <h2 class="section-title">Aaj Hi Ek Bachche Ka Bhavishya Sanwariye</h2>
+                    <p class="section-sub center">Aapka har chhota daan, ek bachche ko dihadi majdoori se nikal kar
+                        school ki taraf le ja sakta hai. Neeche diye gaye kisi bhi tareeke se seedha sahayata karein.
+                    </p>
+                </div>
+
+                <div class="donate-grid">
+                    <div class="donate-box reveal">
+                        <h3><i class="fa-solid fa-qrcode"></i> Scan &amp; Donate</h3>
+                        <div class="qr-box">
+                            <div class="qr-image">
+                                <i class="fa-solid fa-qrcode"></i>
+                                <span>UPI QR CODE PLACEHOLDER</span>
+                            </div>
+                            <div class="upi-apps">
+                                <span><i class="fa-solid fa-bolt"></i> PhonePe</span>
+                                <span>GPay</span>
+                                <span>Paytm</span>
+                            </div>
+                        </div>
+                        <div class="upi-id">
+                            UPI ID
+                            <b id="upiId">skymcs.charitable@upi</b>
+                        </div>
+                    </div>
+
+                    <div class="donate-box reveal">
+                        <h3><i class="fa-solid fa-building-columns"></i> Bank Account Transfer</h3>
+                        <div class="bank-list">
+                            <div class="bank-row">
+                                <div><span class="label">Account Name</span><span class="value"
+                                        id="val-name">Shreekrishnashish Yog Mandir Charitable Sansthan</span></div>
+                                <button class="copy-btn" data-copy-target="val-name" aria-label="Copy Account Name"><i
+                                        class="fa-regular fa-copy"></i></button>
+                            </div>
+                            <div class="bank-row">
+                                <div><span class="label">Account Number</span><span class="value"
+                                        id="val-acc">1648020000000321</span></div>
+                                <button class="copy-btn" data-copy-target="val-acc" aria-label="Copy Account Number"><i
+                                        class="fa-regular fa-copy"></i></button>
+                            </div>
+                            <div class="bank-row">
+                                <div><span class="label">IFSC Code</span><span class="value"
+                                        id="val-ifsc">UTKS0001648</span></div>
+                                <button class="copy-btn" data-copy-target="val-ifsc" aria-label="Copy IFSC Code"><i
+                                        class="fa-regular fa-copy"></i></button>
+                            </div>
+                            <div class="bank-row">
+                                <div><span class="label">Bank Name</span><span class="value" id="val-bank">Utkarsh Small
+                                        Finance Bank</span></div>
+                                <button class="copy-btn" data-copy-target="val-bank" aria-label="Copy Bank Name"><i
+                                        class="fa-regular fa-copy"></i></button>
+                            </div>
+                            <div class="bank-row">
+                                <div><span class="label">Branch</span><span class="value" id="val-branch">Local Branch,
+                                        Hisar</span></div>
+                                <button class="copy-btn" data-copy-target="val-branch" aria-label="Copy Branch"><i
+                                        class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="donate-note"><i class="fa-solid fa-lock"></i> Ye Sansthan poori tarah registered hai aur sabhi
+                    donation records public audit ke liye upalabdh hain.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo"><i class="fa-solid fa-om" style="color:var(--primary);"></i> ShreeKrishnashish
+                    Yog Mandir Charitable Sansthan</div>
+                <p>Ek registered charitable trust jo anaath aur ati-gareeb bachchon ko muft bhojan, aashray, shiksha aur
+                    hunar-vikas pradaan karta hai, taaki wo dihadi majdoori chhodkar samman se jeevan jee sakein.</p>
+                <div class="social-row">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#vision">Our Vision</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#support">Support Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Sampark Karein</h4>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-phone"></i>&nbsp; +91 7982993003</li>
+                    <li><i class="fa-solid fa-envelope"></i>&nbsp; shreefoundation3003@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i>&nbsp; India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 ShreeKrishnashish Yog Mandir Charitable Sansthan. Sarvadhikar Surakshit.</span>
+            <span>Bana Hai Vishwas, Seva Aur Pardarshita Se.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Copy-to-clipboard for bank details
+        document.querySelectorAll('.copy-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var targetId = btn.getAttribute('data-copy-target');
+                var text = document.getElementById(targetId).textContent.trim();
+                var icon = btn.querySelector('i');
+
+                function markCopied() {
+                    btn.classList.add('copied');
+                    icon.classList.remove('fa-copy');
+                    icon.classList.add('fa-check');
+                    setTimeout(function () {
+                        btn.classList.remove('copied');
+                        icon.classList.remove('fa-check');
+                        icon.classList.add('fa-copy');
+                    }, 1800);
+                }
+
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(markCopied).catch(function () {
+                        fallbackCopy(text, markCopied);
+                    });
+                } else {
+                    fallbackCopy(text, markCopied);
+                }
+            });
+        });
+
+        function fallbackCopy(text, cb) {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch (e) { }
+            document.body.removeChild(ta);
+            cb();
+        }
+
+        // Close mobile nav after clicking a link
+        document.querySelectorAll('.nav-links a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                var burger = document.getElementById('burger');
+                if (burger) burger.checked = false;
+            });
+        });
+
+        // Scroll reveal animation
+        var revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach(function (el) { observer.observe(el); });
+        } else {
+            revealEls.forEach(function (el) { el.classList.add('in-view'); });
+        }
+    </script>
+
+</body>
+
+</html>
